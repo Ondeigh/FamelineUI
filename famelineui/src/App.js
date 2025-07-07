@@ -13,7 +13,35 @@ function App() {
         <div className="blur-effect-4"></div>
       </div>
 
-      {/* Header Navigation */}
+      {/* Fixed Navigation Bar */}
+      <nav className="navbar">
+        <div className="nav-container">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7075d0c3fa684185ae5e35d52166ec18ba9d9aa6?width=830"
+            alt="Fameline Logo"
+            className="nav-logo"
+          />
+          <ul className="nav-menu">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#products">Products</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Header Background */}
       <header className="header">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/8984015fab33edf98c290db6ccb697a15121d3a4?width=3840"
