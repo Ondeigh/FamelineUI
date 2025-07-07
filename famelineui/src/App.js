@@ -23,16 +23,13 @@ function App() {
           />
           <ul className="nav-menu">
             <li>
-              <a href="#home">Home</a>
+              <a href="#about">About</a>
             </li>
             <li>
               <a href="#products">Products</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
+              <a href="#reviews">Reviews</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -42,7 +39,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero">
+      <section id="hero" className="hero">
         <div className="hero-content">
           <h1 className="hero-title">Performance Louvers.</h1>
           <h2 className="hero-subtitle">More than a beautiful facade.</h2>
@@ -108,7 +105,7 @@ function App() {
       </section>
 
       {/* About Luva Section */}
-      <section className="about-section">
+      <section id="about" className="about-section">
         <div className="about-content">
           <h2 className="section-title">
             About <span className="highlight-green">Luva</span>
@@ -139,7 +136,7 @@ function App() {
       </section>
 
       {/* Our Performance Louvers Section */}
-      <section className="products-section">
+      <section id="products" className="products-section">
         <div className="section-header">
           <h2 className="section-title">
             Our <span className="highlight-green">Performance Louvers</span>
@@ -256,8 +253,8 @@ function App() {
         </div>
       </section>
 
-      {/* Project Gallery Section */}
-      <section className="projects-section">
+      {/* Reviews Gallery Section */}
+      <section id="reviews" className="projects-section">
         <h2 className="section-title">
           Explore <span className="highlight-green">Performance Louvers</span>
           <br />
@@ -328,7 +325,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
+      <footer id="contact" className="footer">
         <div className="footer-content">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/7075d0c3fa684185ae5e35d52166ec18ba9d9aa6?width=830"
