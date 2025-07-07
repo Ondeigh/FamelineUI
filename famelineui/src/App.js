@@ -87,11 +87,31 @@ function App() {
           />
         </div>
         <div className="performance-indicators">
-          <div className="indicator-group">
-            <div className="indicator active"></div>
-            <div className="indicator"></div>
-            <div className="indicator"></div>
-            <div className="indicator"></div>
+          <div className="toggle-switch-container">
+            <div className="toggle-switch active">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/1dc38137dcf6f1719e2583cb5970e4fb7f59dfa2?width=258"
+                alt="Performance Icon 1"
+              />
+            </div>
+            <div className="toggle-switch">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6a41b33fc3f1bc0ff75c85afae93e7e72cebf5d?width=180"
+                alt="Performance Icon 2"
+              />
+            </div>
+            <div className="toggle-switch">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ddd85d3e40875618f72165f1568ae80eb8d8fff?width=190"
+                alt="Performance Icon 3"
+              />
+            </div>
+            <div className="toggle-switch">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f3e59f0d6fa3704033913793671224314902a367?width=218"
+                alt="Performance Icon 4"
+              />
+            </div>
           </div>
         </div>
       </section>
