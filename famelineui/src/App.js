@@ -41,15 +41,6 @@ function App() {
         </div>
       </nav>
 
-      {/* Header Background */}
-      <header className="header">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/8984015fab33edf98c290db6ccb697a15121d3a4?width=3840"
-          alt="Header Background"
-          className="header-bg"
-        />
-      </header>
-
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
