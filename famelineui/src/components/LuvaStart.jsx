@@ -31,6 +31,10 @@ const LuvaStart = () => {
     navigate("/");
   };
 
+  const handleNextClick = () => {
+    navigate("/luva-location");
+  };
+
   return (
     <div className="luva-start-container">
       {/* Back Button */}
@@ -216,7 +220,11 @@ const LuvaStart = () => {
       /> */}
 
       {/* Next Button */}
-      <button className="next-button" aria-label="Continue to next step">
+      <button
+        className="next-button"
+        onClick={handleNextClick}
+        aria-label="Continue to next step"
+      >
         <svg
           width="60"
           height="60"
