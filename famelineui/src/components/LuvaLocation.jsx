@@ -243,13 +243,17 @@ const LuvaLocation = () => {
         </div>
       </div>
 
-      {/* Bottom Right Decorative Image */}
-      <div className="bottom-decoration">
+      {/* Bottom Right Navigation Button */}
+      <button
+        className="bottom-navigation"
+        onClick={() => navigate("/luva-context")}
+        aria-label="Continue to project context"
+      >
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/4f4cf8838a857ff92280f4887a45169e91281f1e?width=338"
           alt=""
         />
-      </div>
+      </button>
     </div>
   );
 };
