@@ -1,23 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap");
 
 .luva-location-container {
-  width: 100vw;
-  height: 100vh;
+  width: 1920px;
+  height: 1080px;
   border: 4px solid #000;
   position: relative;
   overflow: hidden;
   background: #000;
-  font-family: "League Spartan", sans-serif;
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
 }
 
 /* Background Gradient */
 .background-gradient {
-  width: 100%;
-  height: 100%;
+  width: 1920px;
+  height: 1080px;
   background: linear-gradient(205deg, #000 2.67%, #06330a 91.83%);
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 1px;
+  top: 0px;
 }
 
 /* Top Left Icon - Back to LuvaStart */
@@ -53,14 +58,13 @@
   z-index: 10;
 }
 
-.progress-bar {
-  width: 565px;
-  height: 48px;
-}
-
-.progress-bar svg {
-  width: 100%;
-  height: 100%;
+.progress-indicators {
+  position: absolute;
+  left: 57px;
+  top: 23px;
+  display: flex;
+  gap: 52px;
+  z-index: 11;
 }
 
 /* Top Right Icon - Back to HomePage */
@@ -68,13 +72,14 @@
   width: 86px;
   height: 77px;
   position: absolute;
-  right: 124px;
+  left: 1796px;
   top: 39px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 .home-icon:hover {
@@ -115,11 +120,20 @@
 }
 
 .main-title {
+  width: 754px;
   color: #fff;
-  font:
-    700 90px/90px "League Spartan",
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
     sans-serif;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90px;
   margin: 0 0 41px 0;
+  height: 90px;
 }
 
 .form-section {
@@ -128,11 +142,20 @@
 
 .question-label {
   display: block;
+  width: 712px;
   color: #fff;
-  font:
-    400 50px/35px "League Spartan",
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
     sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
   margin-bottom: 26px;
+  height: 35px;
 }
 
 /* Location Input */
@@ -144,16 +167,20 @@
   width: 553px;
   height: 82px;
   border-radius: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border: 5px solid rgba(0, 0, 0, 0);
   background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 30px;
+  position: relative;
 }
 
 .input-icon {
   width: 44px;
   height: 50px;
+  aspect-ratio: 22/25;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   margin-right: 24px;
   flex-shrink: 0;
 }
@@ -163,14 +190,22 @@
   border: none;
   outline: none;
   background: transparent;
-  font:
-    400 30px/35px "League Spartan",
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
     sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
   color: #000;
 }
 
 .text-input::placeholder {
   color: #797979;
+  font-weight: 400;
 }
 
 /* Dropdown Container */
@@ -180,23 +215,33 @@
 }
 
 .dropdown-input {
-  width: 100%;
+  width: 553px;
   height: 82px;
   border-radius: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border: 5px solid rgba(0, 0, 0, 0);
   background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px 0 40px;
+  padding: 0 40px;
   cursor: pointer;
+  position: relative;
 }
 
 .dropdown-placeholder {
   color: #797979;
-  font:
-    400 30px/35px "League Spartan",
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
     sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  height: 35px;
 }
 
 .dropdown-placeholder.selected {
@@ -206,64 +251,103 @@
 .dropdown-arrow {
   width: 27px;
   height: 38px;
+  aspect-ratio: 27.07/38;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   transform: rotate(-90deg);
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .dropdown-arrow.open {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 .dropdown-options {
   position: absolute;
-  top: 100%;
+  top: 101px;
   left: 0;
-  right: 0;
+  width: 553px;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 50px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
   z-index: 100;
-  max-height: 300px;
-  overflow-y: auto;
-  margin-top: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown-option {
-  padding: 20px 40px;
-  font:
-    400 30px/35px "League Spartan",
+  height: 82px;
+  padding: 0 40px;
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
     sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   color: #000;
   cursor: pointer;
-  border-bottom: 1px solid #f0f0f0;
+  border: 5px solid rgba(0, 0, 0, 0);
+  background: #fff;
+  display: flex;
+  align-items: center;
   transition: background-color 0.2s ease;
+  margin: 0;
 }
 
 .dropdown-option:hover {
-  background-color: #f8f8f8;
+  background: #bababa;
 }
 
-.dropdown-option:last-child {
-  border-bottom: none;
+.dropdown-option.active {
+  background: #dedede;
 }
 
-/* Bottom Right Decorative Image */
-.bottom-decoration {
+/* Bottom Right Navigation Button */
+.bottom-navigation {
   position: absolute;
-  right: 171px;
-  bottom: 99px;
+  left: 1649px;
+  top: 827px;
   z-index: 5;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 0;
 }
 
-.bottom-decoration img {
+.bottom-navigation:hover {
+  transform: scale(1.1);
+}
+
+.bottom-navigation img {
   width: 169px;
   height: 154px;
+  aspect-ratio: 169/154;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-  object-fit: contain;
 }
 
 /* Responsive Design */
+@media (max-width: 1920px) {
+  .luva-location-container {
+    width: 100vw;
+    height: 100vh;
+    transform: scale(calc(100vw / 1920));
+    transform-origin: top left;
+  }
+}
+
 @media (max-width: 991px) {
+  .luva-location-container {
+    transform: none;
+    width: 100vw;
+    height: 100vh;
+  }
+
   .back-icon {
     width: 40px;
     height: 60px;
@@ -277,10 +361,17 @@
     top: 40px;
   }
 
+  .progress-indicators {
+    left: 40px;
+    top: 20px;
+    gap: 30px;
+  }
+
   .home-icon {
     width: 60px;
     height: 55px;
     right: 30px;
+    left: auto;
     top: 30px;
   }
 
@@ -304,12 +395,14 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 30px;
+    width: auto;
   }
 
   .question-label {
     font-size: 35px;
     line-height: 30px;
     margin-bottom: 20px;
+    width: auto;
   }
 
   .location-input {
@@ -320,21 +413,32 @@
     width: 400px;
   }
 
+  .dropdown-input {
+    width: 400px;
+  }
+
+  .dropdown-options {
+    width: 400px;
+  }
+
   .dropdown-option {
     padding: 15px 30px;
     font-size: 25px;
+    height: 70px;
   }
 
   .form-section {
     margin-bottom: 40px;
   }
 
-  .bottom-decoration {
+  .bottom-navigation {
     right: 50px;
+    left: auto;
     bottom: 50px;
+    top: auto;
   }
 
-  .bottom-decoration img {
+  .bottom-navigation img {
     width: 120px;
     height: 110px;
   }
@@ -360,10 +464,17 @@
     top: 25px;
   }
 
+  .progress-indicators {
+    left: 30px;
+    top: 15px;
+    gap: 20px;
+  }
+
   .home-icon {
     width: 45px;
     height: 40px;
     right: 20px;
+    left: auto;
     top: 20px;
   }
 
@@ -388,12 +499,14 @@
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 20px;
+    width: auto;
   }
 
   .question-label {
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 15px;
+    width: auto;
   }
 
   .location-input {
@@ -417,7 +530,14 @@
   }
 
   .dropdown-input {
+    width: 100%;
+    height: 60px;
     padding: 0 25px;
+  }
+
+  .dropdown-options {
+    width: 100%;
+    top: 75px;
   }
 
   .dropdown-placeholder {
@@ -436,38 +556,18 @@
   .dropdown-option {
     padding: 12px 25px;
     font-size: 20px;
+    height: 50px;
   }
 
   .bottom-navigation {
     right: 20px;
+    left: auto;
     bottom: 20px;
+    top: auto;
   }
 
   .bottom-navigation img {
     width: 80px;
     height: 80px;
   }
-}
-
-/* Bottom Navigation Button */
-.bottom-navigation {
-  position: absolute;
-  bottom: 99px;
-  right: 101px;
-  z-index: 5;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  padding: 0;
-}
-
-.bottom-navigation:hover {
-  transform: scale(1.1);
-}
-
-.bottom-navigation img {
-  width: 169px;
-  height: 154px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
