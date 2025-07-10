@@ -41,7 +41,7 @@ const LuvaFunction = () => {
 
   const handleNextClick = () => {
     console.log("Navigate to next step", formData);
-    // Navigation to next page will be implemented later
+    navigate("/luva-aesthetics");
   };
 
   return (

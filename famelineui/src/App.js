@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import LuvaLocation from "./components/LuvaLocation";
 import LuvaContext from "./components/LuvaContext";
 import LuvaFunction from "./components/LuvaFunction";
+import LuvaAesthetics from "./components/LuvaAesthetics";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/luva-location" element={<LuvaLocation />} />
           <Route path="/luva-context" element={<LuvaContext />} />
           <Route path="/luva-function" element={<LuvaFunction />} />
+          <Route path="/luva-aesthetics" element={<LuvaAesthetics />} />
         </Routes>
       </div>
     </Router>
