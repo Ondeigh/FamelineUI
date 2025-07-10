@@ -246,13 +246,6 @@ const HomePage = () => {
         </div>
       </nav>
 
-      {/* Header Image */}
-      <div className="header-image">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/64ff101f3a1004b6e009ad38913b3c343e28fce1?width=5120"
-          alt="Header Background"
-        />
-      </div>
 
       {/* Hero Section */}
       <section className="hero-section" id="hero">
@@ -606,7 +599,7 @@ const HomePage = () => {
       {/* Call to Action Section */}
       <section className="cta-section">
         <h2 className="cta-title">
-          Ready to find the perfect{" "}
+          Ready to find your{" "}
           <span className="highlight-green">Performance Louver</span>?
         </h2>
         <button

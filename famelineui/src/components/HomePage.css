@@ -86,7 +86,7 @@
   padding: 20px 80px;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
 }
 
 .nav-logo {
@@ -119,27 +119,12 @@
   color: #8ce88e;
 }
 
-/* Header Image */
-.header-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  z-index: 2;
-}
-
-.header-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* Hero Section */
 .hero-section {
   position: relative;
   z-index: 10;
-  padding: 240px 80px 120px;
+  padding: 120px 80px 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -154,7 +139,7 @@
 
 .performance-title {
   color: #ccffcd;
-  font-size: 70px;
+  font-size: 65px;
   font-weight: 700;
   line-height: 90px;
   margin-bottom: 20px;
@@ -163,7 +148,7 @@
 
 .beautiful-facade {
   color: #fff;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 700;
   line-height: 90px;
   margin-bottom: 40px;
@@ -175,7 +160,7 @@
   font-size: 30px;
   font-weight: 400;
   line-height: 35px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   max-width: 744px;
 }
 
@@ -187,7 +172,7 @@
   font-family: "League Spartan", sans-serif;
   font-size: 30px;
   font-weight: 400;
-  padding: 26px 37px;
+  padding: 26px 15px;
   width: 278px;
   height: 79px;
   cursor: pointer;
@@ -208,7 +193,6 @@
 .hero-image img {
   width: 100%;
   height: auto;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Why Performance Section */
@@ -709,9 +693,8 @@
 }
 
 .social-links img {
-  width: 80px;
-  height: 78px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+  width: 60px;
+  height: 60px;
 }
 
 .footer-bottom {
@@ -897,7 +880,7 @@
 
   .find-louver-btn {
     font-size: 24px;
-    padding: 20px 30px;
+    padding: 30px 30px;
     width: 240px;
     height: 65px;
   }
