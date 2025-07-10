@@ -1,13 +1,14 @@
 .App {
   position: relative;
   min-height: 100vh;
-  background: #000;
+  /*background: #000*/;
+  background-attachment: fixed;
   overflow-x: hidden;
 }
 
 /* Background Effects */
 .background-effects {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
