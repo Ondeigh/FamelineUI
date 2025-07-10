@@ -1,0 +1,127 @@
+.project-dropdown-container {
+  position: relative;
+  z-index: 10;
+}
+
+.dropdown-trigger {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  padding: 0 40px 0 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 5px solid rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+.dropdown-trigger:focus {
+  border: 3px solid #ccffd9;
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 0px 0px 2px rgba(204, 255, 217, 0.3);
+}
+
+.dropdown-trigger:hover {
+  background: #bababa;
+}
+
+.dropdown-trigger.selected {
+  color: #000;
+}
+
+.dropdown-text {
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 35px;
+  color: #797979;
+  flex: 1;
+}
+
+.dropdown-trigger.selected .dropdown-text {
+  color: #000;
+  font-weight: 400;
+}
+
+.dropdown-arrow {
+  width: 27px;
+  height: 38px;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.dropdown-arrow.rotated {
+  transform: rotate(90deg);
+}
+
+.dropdown-options-container {
+  position: absolute;
+  top: 94px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 50px;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-option {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  background: #fff;
+  cursor: pointer;
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  color: #000;
+  transition: background-color 0.2s ease;
+  border: 5px solid rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+.dropdown-option:focus {
+  background: #e8f7e8;
+  border: 2px solid #ccffd9;
+}
+
+.dropdown-option:hover {
+  background: #bababa;
+}
+
+.dropdown-option.active {
+  background: #dedede;
+}
+
+/* Building type dropdown specific width */
+.building-dropdown {
+  width: 450px;
+}
+
+/* Height dropdown specific width */
+.height-dropdown {
+  width: 460px;
+}
+
+/* Purpose dropdown specific width */
+.purpose-dropdown {
+  width: 553px;
+}
