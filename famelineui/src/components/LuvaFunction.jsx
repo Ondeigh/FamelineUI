@@ -1,63 +1,59 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProjectDropdown from "./ProjectDropdown";
-import "./LuvaContext.css";
+import "./LuvaFunction.css";
 
-const LuvaContext = () => {
+const LuvaFunction = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    purpose: "",
-    buildingType: "",
-    buildingHeight: "",
+    performancePriority: "",
+    technicalGuidance: "",
   });
 
-  const purposeOptions = [
-    "Fresh air intake",
-    "Exhaust air outlet",
-    "Natural ventilation",
-    "Equipment screening",
-    "Architectural feature",
+  const performancePriorityOptions = [
+    "Max airflow",
+    "High weather protection",
+    "Balanced cost/performance",
+    "Cost-effective",
   ];
 
-  const buildingTypeOptions = [
-    "Commercial",
-    "Residential",
-    "Industrial",
-    "Institutional",
-    "Warehouse",
-  ];
-
-  const buildingHeightOptions = [
-    "Low-rise (1-3 floors)",
-    "Mid-rise (4-12 floors)",
-    "High-rise (>12 floors)",
-  ];
-
-  const handleDropdownChange = (field, value) => {
+  const handleDropdownChange = (value) => {
     setFormData((prev) => ({
       ...prev,
-      [field]: value,
+      performancePriority: value,
+    }));
+  };
+
+  const handleInputChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      technicalGuidance: e.target.value,
     }));
   };
 
   const handleBackClick = () => {
-    navigate("/luva-location");
+    navigate("/luva-context");
   };
 
   const handleHomeClick = () => {
     navigate("/");
   };
 
-  return (
-    <div className="luva-context-container">
-      {/* Background Gradient */}
-      <div className="context-background-gradient" />
+  const handleNextClick = () => {
+    console.log("Navigate to next step", formData);
+    // Navigation to next page will be implemented later
+  };
 
-      {/* Top Left Icon - Back to LuvaLocation */}
+  return (
+    <div className="luva-function-container">
+      {/* Background Gradient */}
+      <div className="function-background-gradient" />
+
+      {/* Top Left Icon - Back to LuvaContext */}
       <button
-        className="context-back-icon"
+        className="function-back-icon"
         onClick={handleBackClick}
-        aria-label="Go back to location"
+        aria-label="Go back to context"
       >
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e6e7244d56dd83755aecc8b48ba838061dd162a?width=102"
@@ -66,8 +62,8 @@ const LuvaContext = () => {
       </button>
 
       {/* Progress Bar */}
-      <div className="context-progress-bar-container">
-        <div className="context-progress-bar">
+      <div className="function-progress-bar-container">
+        <div className="function-progress-bar">
           <svg
             width="575"
             height="59"
@@ -82,13 +78,13 @@ const LuvaContext = () => {
               stroke="#CCFFD9"
               strokeWidth="5"
             />
-            <g filter="url(#filter0_d_318_2816)">
+            <g filter="url(#filter0_d_318_2815)">
               <rect
                 x="15.5684"
                 y="15.5681"
                 width="26.9008"
                 height="24.9793"
-                fill="url(#pattern0_318_2816)"
+                fill="url(#pattern0_318_2815)"
                 shapeRendering="crispEdges"
               />
             </g>
@@ -99,24 +95,35 @@ const LuvaContext = () => {
               stroke="#CCFFD9"
               strokeWidth="5"
             />
-            <g filter="url(#filter1_d_318_2816)">
+            <g filter="url(#filter1_d_318_2815)">
               <rect
                 x="119.568"
                 y="15.5681"
                 width="26.9008"
                 height="24.9793"
-                fill="url(#pattern1_318_2816)"
+                fill="url(#pattern1_318_2815)"
                 shapeRendering="crispEdges"
               />
             </g>
             <path
-              d="M236.059 2.5C250.704 2.5 262.577 14.3728 262.577 29.0186C262.577 43.6643 250.704 55.5371 236.059 55.5371C221.413 55.5371 209.54 43.6643 209.54 29.0186C209.54 14.3728 221.413 2.5 236.059 2.5Z"
-              fill="black"
-              stroke="white"
+              d="M237.019 2.5C251.664 2.5 263.537 14.3728 263.537 29.0186C263.537 43.6643 251.664 55.5371 237.019 55.5371C222.373 55.5371 210.5 43.6643 210.5 29.0186C210.5 14.3728 222.373 2.5 237.019 2.5Z"
+              fill="#CCFFCD"
+              fillOpacity="0.2"
+              stroke="#CCFFD9"
               strokeWidth="5"
             />
+            <g filter="url(#filter2_d_318_2815)">
+              <rect
+                x="223.568"
+                y="15.5681"
+                width="26.9008"
+                height="24.9793"
+                fill="url(#pattern2_318_2815)"
+                shapeRendering="crispEdges"
+              />
+            </g>
             <path
-              d="M545.898 2.5C560.544 2.5 572.417 14.3728 572.417 29.0186C572.417 43.6643 560.544 55.5371 545.898 55.5371C531.252 55.5371 519.379 43.6643 519.379 29.0186C519.379 14.3728 531.252 2.5 545.898 2.5Z"
+              d="M545.897 2.5C560.543 2.5 572.416 14.3728 572.416 29.0186C572.416 43.6643 560.543 55.5371 545.897 55.5371C531.252 55.5371 519.379 43.6643 519.379 29.0186C519.379 14.3728 531.252 2.5 545.897 2.5Z"
               fill="black"
               stroke="white"
               strokeWidth="5"
@@ -128,17 +135,17 @@ const LuvaContext = () => {
               strokeWidth="5"
             />
             <path
-              d="M339.338 2.5C353.984 2.5 365.857 14.3728 365.857 29.0186C365.857 43.6643 353.984 55.5371 339.338 55.5371C324.693 55.5371 312.82 43.6643 312.82 29.0186C312.82 14.3728 324.693 2.5 339.338 2.5Z"
+              d="M339.339 2.5C353.985 2.5 365.857 14.3728 365.857 29.0186C365.857 43.6643 353.985 55.5371 339.339 55.5371C324.693 55.5371 312.82 43.6643 312.82 29.0186C312.82 14.3728 324.693 2.5 339.339 2.5Z"
               fill="black"
               stroke="white"
               strokeWidth="5"
             />
             <defs>
               <filter
-                id="filter0_d_318_2816"
+                id="filter0_d_318_2815"
                 x="11.5684"
                 y="15.5681"
-                width="34.9009"
+                width="34.9004"
                 height="32.9793"
                 filterUnits="userSpaceOnUse"
                 colorInterpolationFilters="sRGB"
@@ -160,31 +167,31 @@ const LuvaContext = () => {
                 <feBlend
                   mode="normal"
                   in2="BackgroundImageFix"
-                  result="effect1_dropShadow_318_2816"
+                  result="effect1_dropShadow_318_2815"
                 />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
-                  in2="effect1_dropShadow_318_2816"
+                  in2="effect1_dropShadow_318_2815"
                   result="shape"
                 />
               </filter>
               <pattern
-                id="pattern0_318_2816"
+                id="pattern0_318_2815"
                 patternContentUnits="objectBoundingBox"
                 width="1"
                 height="1"
               >
                 <use
-                  xlinkHref="#image0_318_2816"
+                  xlinkHref="#image0_318_2815"
                   transform="matrix(0.0013986 0 0 0.00149701 -1.06993 -0.684132)"
                 />
               </pattern>
               <filter
-                id="filter1_d_318_2816"
+                id="filter1_d_318_2815"
                 x="115.568"
                 y="15.5681"
-                width="34.9009"
+                width="34.9004"
                 height="32.9793"
                 filterUnits="userSpaceOnUse"
                 colorInterpolationFilters="sRGB"
@@ -206,23 +213,69 @@ const LuvaContext = () => {
                 <feBlend
                   mode="normal"
                   in2="BackgroundImageFix"
-                  result="effect1_dropShadow_318_2816"
+                  result="effect1_dropShadow_318_2815"
                 />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
-                  in2="effect1_dropShadow_318_2816"
+                  in2="effect1_dropShadow_318_2815"
                   result="shape"
                 />
               </filter>
               <pattern
-                id="pattern1_318_2816"
+                id="pattern1_318_2815"
                 patternContentUnits="objectBoundingBox"
                 width="1"
                 height="1"
               >
                 <use
-                  xlinkHref="#image0_318_2816"
+                  xlinkHref="#image0_318_2815"
+                  transform="matrix(0.0013986 0 0 0.00149701 -1.06993 -0.684132)"
+                />
+              </pattern>
+              <filter
+                id="filter2_d_318_2815"
+                x="219.568"
+                y="15.5681"
+                width="34.9004"
+                height="32.9793"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+              >
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_318_2815"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_318_2815"
+                  result="shape"
+                />
+              </filter>
+              <pattern
+                id="pattern2_318_2815"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use
+                  xlinkHref="#image0_318_2815"
                   transform="matrix(0.0013986 0 0 0.00149701 -1.06993 -0.684132)"
                 />
               </pattern>
@@ -233,7 +286,7 @@ const LuvaContext = () => {
 
       {/* Top Right Icon - Go to HomePage */}
       <button
-        className="context-home-icon"
+        className="function-home-icon"
         onClick={handleHomeClick}
         aria-label="Go to home"
       >
@@ -244,57 +297,54 @@ const LuvaContext = () => {
       </button>
 
       {/* Main Content */}
-      <div className="context-main-content">
-        <h1 className="context-main-title">Project Context</h1>
+      <div className="function-main-content">
+        <h1 className="function-main-title">Performance Preferences</h1>
 
-        <div className="questions-container">
-          {/* Purpose Section */}
-          <div className="question-section">
-            <h2 className="question-title">What is the purpose?</h2>
+        <div className="function-sections-container">
+          {/* Performance Priority Section */}
+          <div className="function-section">
+            <h2 className="function-question-title">
+              What is your performance priority?
+            </h2>
             <ProjectDropdown
-              placeholder="Choose purpose"
-              options={purposeOptions}
-              value={formData.purpose}
-              onChange={(value) => handleDropdownChange("purpose", value)}
+              placeholder="Choose priority"
+              options={performancePriorityOptions}
+              value={formData.performancePriority}
+              onChange={handleDropdownChange}
               width="553px"
-              className="purpose-dropdown"
+              className="priority-dropdown"
             />
           </div>
 
-          {/* Building Type Section */}
-          <div className="question-section">
-            <h2 className="question-title">What is the building?</h2>
-            <ProjectDropdown
-              placeholder="Choose building type"
-              options={buildingTypeOptions}
-              value={formData.buildingType}
-              onChange={(value) => handleDropdownChange("buildingType", value)}
-              width="450px"
-              className="building-dropdown"
-            />
-          </div>
-
-          {/* Building Height Section */}
-          <div className="question-section">
-            <h2 className="question-title">What is the building height?</h2>
-            <ProjectDropdown
-              placeholder="Choose height"
-              options={buildingHeightOptions}
-              value={formData.buildingHeight}
-              onChange={(value) =>
-                handleDropdownChange("buildingHeight", value)
-              }
-              width="460px"
-              className="height-dropdown"
-            />
+          {/* Technical Guidance Section */}
+          <div className="function-section">
+            <h2 className="function-guidance-title">
+              Further technical guidance{" "}
+              <span className="optional-text">(Optional)</span>
+            </h2>
+            <p className="function-guidance-subtitle">
+              This helps us understand your technical needs
+              <br />
+              but is not required at this stage.
+            </p>
+            <div className="function-input-container">
+              <input
+                type="text"
+                className="function-input"
+                placeholder="E.g. <1000CFM Airflow, ..."
+                value={formData.technicalGuidance}
+                onChange={handleInputChange}
+                aria-label="Technical guidance input"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Right Navigation Button */}
       <button
-        className="context-bottom-navigation"
-        onClick={() => navigate("/luva-function")}
+        className="function-bottom-navigation"
+        onClick={handleNextClick}
         aria-label="Continue to next step"
       >
         <img
@@ -306,4 +356,4 @@ const LuvaContext = () => {
   );
 };
 
-export default LuvaContext;
+export default LuvaFunction;
