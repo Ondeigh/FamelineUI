@@ -1,20 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap");
 
 .luva-start-container {
-  width: 1920px;
-  height: 1080px;
-  border: 4px solid #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "main orb";
+  width: 100vw;
+  height: 100vh;
   background: #000;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-family:
-    "League Spartan",
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
+  font-family: "League Spartan", -apple-system, Roboto, Helvetica, sans-serif;
   overflow: hidden;
+  padding: 50px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 /* Top Left Icon */
@@ -44,22 +41,28 @@
 
 /* Main Content Container */
 .main-content {
-  position: absolute;
-  left: 200px;
-  top: 236px;
-  width: 400 px;
-  height: 200px;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left; 
   z-index: 5;
+  width: 100%;
+  grid-column: 1 / 2;
 }
 
 /* I'm Luva Text */
 .intro-text {
-  width: 754px;
+  width: 754px; 
   height: 90px;
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 600;
   line-height: 90px;
   margin-bottom: 82px;
+  margin-right: auto;
+  margin-left: 0;
+  text-align: left;
 }
 
 .intro-white {
@@ -70,7 +73,7 @@
     Helvetica,
     sans-serif;
   font-weight: 700;
-  font-size: 90px;
+  font-size: 70px;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -82,17 +85,19 @@
     Helvetica,
     sans-serif;
   font-weight: 700;
-  font-size: 90px;
+  font-size: 70px;
   color: rgba(140, 232, 142, 1);
 }
 
 /* Form Sections */
 .form-section {
   margin-bottom: 66px;
+  margin-right: auto;
+  margin-left: 0;
 }
 
 .question-text {
-  width: 712px;
+  width: 712px; 
   color: #fff;
   font-family:
     "League Spartan",
@@ -106,6 +111,7 @@
   line-height: 35px;
   height: 35px;
   margin-bottom: 23px;
+  text-align: left;
 }
 
 /* Input Wrapper and Input Styling */
@@ -154,12 +160,11 @@
 
 /* Green Gradient Orb SVG */
 .gradient-orb {
-  position: absolute;
-  left: 1049px;
-  top: 207px;
-  width: 692px;
-  height: 640px;
+  grid-area: orb;
+  align-self: center;
+  justify-self: center;
   z-index: 2;
+  grid-column: 2 / 3;
 }
 
 /* Top Right Icon */
@@ -195,17 +200,16 @@
   bottom: 99px;
   width: 169px;
   height: 154px;
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 .bottom-right-icon img {
-  width: 100%;
-  height: 100%;
+  width: 125%;
+  height: 125%;
   object-fit: contain;
 }
 
@@ -222,14 +226,7 @@
     position: relative;
   }
 
-  .main-content {
-    left: 10.42%;
-    top: 21.85%;
-  }
-
   .gradient-orb {
-    left: 54.64%;
-    top: 19.17%;
     width: 36.04%;
     height: 59.26%;
   }
@@ -279,11 +276,6 @@
 }
 
 @media (max-width: 1024px) {
-  .main-content {
-    left: 5%;
-    top: 15%;
-  }
-
   .intro-text {
     font-size: 50px;
     line-height: 50px;
@@ -326,12 +318,6 @@
 }
 
 @media (max-width: 768px) {
-  .main-content {
-    left: 5%;
-    top: 12%;
-    right: 5%;
-  }
-
   .intro-text {
     font-size: 40px;
     line-height: 40px;
@@ -390,12 +376,6 @@
 }
 
 @media (max-width: 480px) {
-  .main-content {
-    left: 3%;
-    top: 10%;
-    right: 3%;
-  }
-
   .intro-text {
     font-size: 32px;
     line-height: 32px;
