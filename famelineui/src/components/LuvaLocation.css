@@ -29,11 +29,11 @@
 
 /* Top Left Icon - Back to LuvaStart */
 .back-icon {
-  width: 51px;
+  width: 52px;
   height: 78px;
   position: absolute;
-  left: 45px;
-  top: 39px;
+  left: 50px;
+  top: 40px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -70,8 +70,8 @@
   width: 86px;
   height: 77px;
   position: absolute;
-  left: 1796px;
-  top: 39px;
+  right: 50px;
+  top: 40px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -127,7 +127,7 @@
     sans-serif;
   font-size: 90px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 90px;
   margin: 0 0 41px 0;
   height: 90px;
@@ -149,7 +149,7 @@
     sans-serif;
   font-size: 50px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 35px;
   margin-bottom: 26px;
   height: 35px;
@@ -194,14 +194,14 @@
     sans-serif;
   font-size: 30px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 35px;
   color: #000;
 }
 
 .text-input::placeholder {
   color: #797979;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Dropdown Container */
@@ -235,7 +235,7 @@
     sans-serif;
   font-size: 30px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 35px;
   height: 35px;
 }
@@ -283,7 +283,7 @@
     sans-serif;
   font-size: 30px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
   color: #000;
   cursor: pointer;
@@ -306,8 +306,8 @@
 /* Bottom Right Navigation Button */
 .bottom-navigation {
   position: absolute;
-  left: 1649px;
-  top: 827px;
+  right: 101px;
+  bottom: 99px;
   z-index: 5;
   background: none;
   border: none;
@@ -324,15 +324,14 @@
   width: 169px;
   height: 154px;
   aspect-ratio: 169/154;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 /* Responsive Design */
-@media (max-width: 1920px) {
+@media (max-width: 2560px) {
   .luva-location-container {
     width: 100vw;
     height: 100vh;
-    transform: scale(calc(100vw / 1920));
+    transform: scale(calc(100vw / 2560));
     transform-origin: top left;
   }
 }
@@ -342,6 +341,7 @@
     transform: none;
     width: 100vw;
     height: 100vh;
+    aspect-ratio: 16/9;
   }
 
   .back-icon {
@@ -445,6 +445,7 @@
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    aspect-ratio: 16/9;
   }
 
   .back-icon {

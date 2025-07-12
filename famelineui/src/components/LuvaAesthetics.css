@@ -32,8 +32,8 @@
 
 .aesthetics-back-icon {
   position: absolute;
-  top: 39px;
-  left: 45px;
+  top: 40px;
+  left: 50px;
   background: none;
   border: none;
   cursor: pointer;
@@ -46,7 +46,7 @@
 }
 
 .aesthetics-back-icon img {
-  width: 51px;
+  width: 52px;
   height: 78px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -65,8 +65,8 @@
 
 .aesthetics-home-icon {
   position: absolute;
-  top: 39px;
-  right: 129px;
+  top: 40px;
+  right: 50px;
   background: none;
   border: none;
   cursor: pointer;
@@ -112,7 +112,6 @@
   width: 494px;
   height: 522px;
   z-index: 4;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .aesthetics-preview-image img {
@@ -376,7 +375,7 @@
 
 .aesthetics-disclaimer {
   position: absolute;
-  bottom: 120px;
+  bottom: 80px;
   left: 631px;
   width: 658px;
   color: #fff;
