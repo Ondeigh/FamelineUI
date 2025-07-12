@@ -1,25 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap");
+
 .luva-context-container {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  border: 4px solid #000;
 }
 
-.context-background-gradient {
+.context-border {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border: 4px solid #000;
+  pointer-events: none;
+  z-index: 15;
+}
+
+.context-background-gradient {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   background: linear-gradient(205deg, #000 2.67%, #06330a 91.83%);
   z-index: 1;
 }
 
 .context-back-icon {
   position: absolute;
-  top: 39px;
-  left: 45px;
+  top: 40px;
+  left: 50px;
   background: none;
   border: none;
   cursor: pointer;
@@ -32,7 +44,7 @@
 }
 
 .context-back-icon img {
-  width: 51px;
+  width: 52px;
   height: 78px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -44,23 +56,15 @@
   z-index: 10;
 }
 
-.context-progress-bar svg {
+.context-progress-bar-container svg {
   width: 565px;
   height: 48px;
-}
-
-.progress-indicators {
-  position: absolute;
-  top: 23px;
-  left: 0;
-  width: 100%;
-  height: 2px;
 }
 
 .context-home-icon {
   position: absolute;
   top: 40px;
-  right: 104px;
+  right: 50px;
   background: none;
   border: none;
   cursor: pointer;
@@ -84,7 +88,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 225px;
+  padding-top: 240px;
   width: 100%;
 }
 
@@ -99,28 +103,27 @@
     sans-serif;
   font-size: 90px;
   font-weight: 500;
-  line-height: 90px;
-  margin: 0 0 100px 0;
+  line-height: 0px;
+  margin: 0 0 80px 0;
   width: 719px;
 }
 
 .questions-container {
   display: flex;
-  gap: 30px;
+  gap: 100px;
   align-items: flex-start;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1800px;
   justify-content: center;
-  padding: 0 50px;
+  padding-top: 70px;
 }
 
 .question-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  flex: 1;
-  max-width: 553px;
+  gap: 50px;
+  flex: 0 0 auto;
 }
 
 .question-title {
@@ -134,19 +137,28 @@
     sans-serif;
   font-size: 50px;
   font-weight: 300;
-  line-height: 35px;
+  line-height: 0px;
   margin: 0;
-  width: 100%;
+  white-space: nowrap;
 }
 
-.context-bottom-decoration {
+.context-next-icon {
   position: absolute;
   bottom: 99px;
   right: 101px;
-  z-index: 5;
+  z-index: 10;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 0;
 }
 
-.context-bottom-decoration img {
+.context-next-icon:hover {
+  transform: scale(1.1);
+}
+
+.context-next-icon img {
   width: 169px;
   height: 154px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -155,7 +167,7 @@
 /* Responsive Design */
 @media (max-width: 1600px) {
   .questions-container {
-    gap: 30px;
+    gap: 60px;
     padding: 0 30px;
   }
 
@@ -165,7 +177,7 @@
 
   .context-main-title {
     font-size: 80px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
   }
 }
 
@@ -183,12 +195,16 @@
   }
 
   .context-main-content {
-    padding-top: 180px;
+    padding-top: 220px;
   }
 
   .context-main-title {
     font-size: 70px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+  }
+
+  .question-title {
+    white-space: normal;
   }
 }
 
@@ -196,7 +212,7 @@
   .context-main-title {
     font-size: 50px;
     width: 90%;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
   .question-title {
@@ -214,9 +230,9 @@
     transform: translateX(-50%);
   }
 
-  .context-progress-bar svg {
+  .context-progress-bar-container svg {
     width: 400px;
-    height: 34px;
+    height: 42px;
   }
 
   .context-back-icon {
@@ -228,27 +244,8 @@
     top: 20px;
     right: 20px;
   }
-}
 
-/* Bottom Navigation Button */
-.context-bottom-navigation {
-  position: absolute;
-  bottom: 99px;
-  right: 101px;
-  z-index: 5;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  padding: 0;
-}
-
-.context-bottom-navigation:hover {
-  transform: scale(1.1);
-}
-
-.context-bottom-navigation img {
-  width: 169px;
-  height: 154px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  .context-main-content {
+    padding-top: 180px;
+  }
 }

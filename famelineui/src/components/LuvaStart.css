@@ -1,31 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap");
 
 .luva-start-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "main orb";
   width: 100vw;
   height: 100vh;
+  aspect-ratio: 16/9;
+  border: 4px solid #000;
   background: #000;
-  font-family: "League Spartan", -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    "League Spartan",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   overflow: hidden;
-  padding: 50px;
-  box-sizing: border-box;
   position: relative;
 }
 
 /* Top Left Icon */
 .top-left-icon {
   position: absolute;
-  left: 45px;
-  top: 39px;
-  width: 51px;
+  left: 50px;
+  top: 40px;
+  width: 52px;
   height: 78px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-left-icon img {
@@ -41,27 +46,25 @@
 
 /* Main Content Container */
 .main-content {
-  grid-area: main;
+  position: absolute;
+  left: 520px;
+  top: 422px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  text-align: left; 
+  text-align: left;
   z-index: 5;
-  width: 100%;
-  grid-column: 1 / 2;
 }
 
 /* I'm Luva Text */
 .intro-text {
-  width: 754px; 
+  width: 754px;
   height: 90px;
-  font-size: 70px;
+  font-size: 90px;
   font-weight: 600;
   line-height: 90px;
-  margin-bottom: 82px;
-  margin-right: auto;
-  margin-left: 0;
+  margin-bottom: 172px;
   text-align: left;
 }
 
@@ -73,7 +76,7 @@
     Helvetica,
     sans-serif;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 90px;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -85,19 +88,17 @@
     Helvetica,
     sans-serif;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 90px;
   color: rgba(140, 232, 142, 1);
 }
 
 /* Form Sections */
 .form-section {
-  margin-bottom: 66px;
-  margin-right: auto;
-  margin-left: 0;
+  margin-bottom: 141px;
 }
 
 .question-text {
-  width: 712px; 
+  width: 712px;
   color: #fff;
   font-family:
     "League Spartan",
@@ -110,7 +111,7 @@
   font-weight: 400;
   line-height: 35px;
   height: 35px;
-  margin-bottom: 23px;
+  margin-bottom: 58px;
   text-align: left;
 }
 
@@ -132,7 +133,7 @@
   outline: none;
   background: transparent;
   border-radius: 50px;
-  padding: 0 42px;
+  padding: 0 35px;
   font-family:
     "League Spartan",
     -apple-system,
@@ -140,8 +141,9 @@
     Helvetica,
     sans-serif;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 100;
   color: #000;
+  box-sizing: border-box;
 }
 
 .form-input::placeholder {
@@ -160,18 +162,19 @@
 
 /* Green Gradient Orb SVG */
 .gradient-orb {
-  grid-area: orb;
-  align-self: center;
-  justify-self: center;
+  position: absolute;
+  left: 1359px;
+  top: 390px;
+  width: 692px;
+  height: 640px;
   z-index: 2;
-  grid-column: 2 / 3;
 }
 
 /* Top Right Icon */
 .top-right-icon {
   position: absolute;
-  right: 39px;
-  top: 35px;
+  right: 46px;
+  top: 40px;
   width: 86px;
   height: 77px;
   background: transparent;
@@ -179,7 +182,9 @@
   cursor: pointer;
   padding: 0;
   z-index: 10;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-right-icon img {
@@ -196,20 +201,23 @@
 /* Bottom Right Icon */
 .bottom-right-icon {
   position: absolute;
-  right: 102px;
-  bottom: 99px;
-  width: 169px;
-  height: 154px;
+  right: 165px;
+  bottom: 49px;
+  width: 275px;
+  height: 250px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bottom-right-icon img {
-  width: 125%;
-  height: 125%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
