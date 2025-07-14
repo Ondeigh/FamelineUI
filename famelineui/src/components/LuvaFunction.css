@@ -1,25 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap");
+
 .luva-function-container {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  border: 4px solid #000;
 }
 
-.function-background-gradient {
+.function-border {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border: 4px solid #000;
+  pointer-events: none;
+  z-index: 15;
+}
+
+.function-background-gradient {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   background: linear-gradient(205deg, #000 2.67%, #06330a 91.83%);
   z-index: 1;
 }
 
 .function-back-icon {
   position: absolute;
-  top: 39px;
-  left: 45px;
+  top: 40px;
+  left: 50px;
   background: none;
   border: none;
   cursor: pointer;
@@ -32,7 +44,7 @@
 }
 
 .function-back-icon img {
-  width: 51px;
+  width: 52px;
   height: 78px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -44,43 +56,15 @@
   z-index: 10;
 }
 
-.function-progress-bar svg {
+.function-progress-bar-container svg {
   width: 565px;
   height: 48px;
 }
 
-.progress-indicators {
-  position: absolute;
-  top: 23px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-}
-
-.progress-line {
-  position: absolute;
-  width: 37px;
-  height: 2px;
-  border-radius: 25px;
-  border: 5px solid rgba(0, 0, 0, 0);
-}
-
-.progress-line.green {
-  background: #ccffd9;
-}
-
-.progress-line.green-light {
-  background: #ccffcd;
-}
-
-.progress-line.white {
-  background: #fff;
-}
-
 .function-home-icon {
   position: absolute;
-  top: 39px;
-  right: 126px;
+  top: 40px;
+  right: 50px;
   background: none;
   border: none;
   cursor: pointer;
@@ -104,10 +88,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: 180px;
+  padding-top: 200px;
   width: 100%;
-  min-height: calc(100vh - 200px);
 }
 
 .function-main-title {
@@ -122,26 +104,25 @@
   font-size: 90px;
   font-weight: 500;
   line-height: 90px;
-  margin: 0 0 100px 0;
+  margin: 0 0 80px 0;
   width: 1125px;
 }
 
-.function-sections-container {
+.function-questions-container {
   display: flex;
-  gap: 150px;
+  gap: 100px;
   align-items: flex-start;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1800px;
   justify-content: center;
-  padding: 0 50px;
 }
 
-.function-section {
+.function-question-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 .function-question-title {
@@ -156,8 +137,8 @@
   font-weight: 300;
   line-height: 35px;
   margin: 0;
-  width: 100%;
   max-width: 725px;
+  text-align: left;
 }
 
 .function-guidance-title {
@@ -173,12 +154,7 @@
   font-weight: 100;
   line-height: 35px;
   margin: 0;
-  width: 100%;
-  max-width: 650px;
-}
-
-.optional-text {
-  font-weight: 100;
+  max-width: 1068px;
 }
 
 .function-guidance-subtitle {
@@ -194,15 +170,13 @@
   font-weight: 100;
   line-height: 25px;
   margin: 0;
-  width: 100%;
-  max-width: 650px;
+  max-width: 400px;
 }
 
 .function-input-container {
   width: 553px;
   height: 82px;
-  margin-top: 20px;
-  align-self: center;
+  margin-top: 4px;
 }
 
 .function-input {
@@ -225,6 +199,7 @@
   color: #797979;
   outline: none;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .function-input:focus {
@@ -240,11 +215,11 @@
   font-weight: 100;
 }
 
-.function-bottom-navigation {
+.function-next-icon {
   position: absolute;
   bottom: 99px;
   right: 101px;
-  z-index: 5;
+  z-index: 10;
   background: none;
   border: none;
   cursor: pointer;
@@ -252,67 +227,53 @@
   padding: 0;
 }
 
-.function-bottom-navigation:hover {
+.function-next-icon:hover {
   transform: scale(1.1);
 }
 
-.function-bottom-navigation img {
+.function-next-icon img {
   width: 169px;
   height: 154px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-/* Specific styling for priority dropdown */
-.priority-dropdown {
-  width: 553px;
-}
-
 /* Responsive Design */
 @media (max-width: 1600px) {
-  .function-sections-container {
-    gap: 120px;
-    padding: 0 40px;
+  .function-questions-container {
+    gap: 60px;
+    padding: 0 30px;
   }
 
   .function-question-title {
     font-size: 45px;
-    max-width: 600px;
   }
 
   .function-guidance-title {
     font-size: 45px;
-    max-width: 600px;
   }
 
   .function-main-title {
     font-size: 80px;
     margin-bottom: 80px;
-    width: 900px;
-  }
-
-  .function-guidance-subtitle {
-    max-width: 550px;
   }
 }
 
 @media (max-width: 1400px) {
-  .function-sections-container {
+  .function-questions-container {
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
     max-width: 800px;
-    padding: 0 30px;
   }
 
-  .function-section {
-    align-items: center;
+  .function-question-section {
+    max-width: 553px;
     width: 100%;
-    max-width: 600px;
   }
 
   .function-question-title {
     text-align: center;
-    width: 100%;
+    white-space: normal;
   }
 
   .function-guidance-title {
@@ -329,7 +290,7 @@
   }
 
   .function-main-content {
-    padding-top: 150px;
+    padding-top: 220px;
   }
 
   .function-main-title {
@@ -343,7 +304,7 @@
   .function-main-title {
     font-size: 50px;
     width: 90%;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
   .function-question-title {
@@ -361,9 +322,9 @@
     line-height: 28px;
   }
 
-  .function-sections-container {
+  .function-questions-container {
     padding: 0 20px;
-    gap: 60px;
+    gap: 30px;
   }
 
   .function-progress-bar-container {
@@ -371,9 +332,9 @@
     transform: translateX(-50%);
   }
 
-  .function-progress-bar svg {
+  .function-progress-bar-container svg {
     width: 400px;
-    height: 34px;
+    height: 42px;
   }
 
   .function-back-icon {
@@ -384,6 +345,10 @@
   .function-home-icon {
     top: 20px;
     right: 20px;
+  }
+
+  .function-main-content {
+    padding-top: 180px;
   }
 
   .function-input {

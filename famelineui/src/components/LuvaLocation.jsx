@@ -60,16 +60,8 @@ const LuvaLocation = () => {
       </button>
 
       {/* Progress Bar */}
-      <div className="progress-bar-container">
-        <div className="progress-indicators">
-          <div className="progress-indicator active"></div>
-          <div className="progress-indicator"></div>
-          <div className="progress-indicator"></div>
-          <div className="progress-indicator"></div>
-          <div className="progress-indicator"></div>
-        </div>
+      <div className="location-progress-bar-container">
         <svg
-          className="progress-bar-svg"
           width="575"
           height="59"
           viewBox="0 0 575 59"
@@ -83,21 +75,33 @@ const LuvaLocation = () => {
             stroke="#CCFFD9"
             strokeWidth="5"
           />
-          <g filter="url(#filter0_d_318_2817)">
+          <g filter="url(#filter0_d_2001_891)">
             <rect
               x="15.5684"
-              y="15.5681"
-              width="26.9008"
+              y="15.5684"
+              width="26.7368"
               height="24.9793"
-              fill="url(#pattern0_318_2817)"
+              fill="url(#pattern0_2001_891)"
               shapeRendering="crispEdges"
             />
           </g>
           <path
             d="M133.019 2.5C147.664 2.5 159.537 14.3728 159.537 29.0186C159.537 43.6643 147.664 55.5371 133.019 55.5371C118.373 55.5371 106.5 43.6643 106.5 29.0186C106.5 14.3728 118.373 2.5 133.019 2.5Z"
+            fill="#CCFFCD"
+            fillOpacity="0"
             stroke="white"
             strokeWidth="5"
           />
+          <g filter="url(#filter1_d_2001_891)">
+            <rect
+              x="119.568"
+              y="15.5684"
+              width="26.7368"
+              height="24.9793"
+              fill="url(#pattern1_2001_891)"
+              shapeRendering="crispEdges"
+            />
+          </g>
           <path
             d="M236.059 2.5C250.704 2.5 262.577 14.3728 262.577 29.0186C262.577 43.6643 250.704 55.5371 236.059 55.5371C221.413 55.5371 209.54 43.6643 209.54 29.0186C209.54 14.3728 221.413 2.5 236.059 2.5Z"
             fill="black"
@@ -124,11 +128,11 @@ const LuvaLocation = () => {
           />
           <defs>
             <filter
-              id="filter0_d_318_2817"
+              id="filter0_d_2001_891"
               x="11.5684"
-              y="15.5681"
-              width="34.9009"
-              height="32.9793"
+              y="15.5684"
+              width="34.7368"
+              height="32.9795"
               filterUnits="userSpaceOnUse"
               colorInterpolationFilters="sRGB"
             >
@@ -149,29 +153,76 @@ const LuvaLocation = () => {
               <feBlend
                 mode="normal"
                 in2="BackgroundImageFix"
-                result="effect1_dropShadow_318_2817"
+                result="effect1_dropShadow_2001_891"
               />
               <feBlend
                 mode="normal"
                 in="SourceGraphic"
-                in2="effect1_dropShadow_318_2817"
+                in2="effect1_dropShadow_2001_891"
                 result="shape"
               />
             </filter>
             <pattern
-              id="pattern0_318_2817"
+              id="pattern0_2001_891"
               patternContentUnits="objectBoundingBox"
               width="1"
               height="1"
             >
               <use
-                xlinkHref="#image0_318_2817"
+                xlinkHref="#image0_2001_891"
+                transform="matrix(0.0013986 0 0 0.00149701 -1.06993 -0.684132)"
+              />
+            </pattern>
+            <filter
+              id="filter1_d_2001_891"
+              x="115.568"
+              y="15.5684"
+              width="34.7368"
+              height="32.9795"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_2001_891"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_2001_891"
+                result="shape"
+              />
+            </filter>
+            <pattern
+              id="pattern1_2001_891"
+              patternContentUnits="objectBoundingBox"
+              width="1"
+              height="1"
+            >
+              <use
+                xlinkHref="#image0_2001_891"
                 transform="matrix(0.0013986 0 0 0.00149701 -1.06993 -0.684132)"
               />
             </pattern>
           </defs>
         </svg>
       </div>
+
 
       {/* Top Right Icon - Back to HomePage */}
       <button
